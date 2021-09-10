@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import setResultToLocalStorage from '../../helperFunc/setResultToLocalStorage';
 import Icons from '../../alphabetIcons/exportIcons';
 
-const Quiz = ({ data }) => {
+function Quiz({ data }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentQuestion = data[currentIndex];
   let interval;
@@ -12,19 +12,19 @@ const Quiz = ({ data }) => {
   const progressRef = useRef();
   const quizBoxRef = useRef();
 
-  const toggleClick = (answerId) => {
+  function toggleClick(answerId) {
     currentQuestion.correctAnswerId === answerId
       ? setResultToLocalStorage(true)
       : setResultToLocalStorage(false);
     nextQuiz();
-  };
+  }
 
-  const resetProgress = () => {
+  function resetProgress() {
     clearInterval(interval);
     progressRef.current.style.width = 0;
-  };
+  }
 
-  const nextQuiz = () => {
+  function nextQuiz() {
     setTimeout(() => {
       if (currentIndex < data.length - 1) {
         setCurrentIndex(currentIndex + 1);
@@ -33,9 +33,9 @@ const Quiz = ({ data }) => {
       }
     }, 500);
     slideUpAnimation();
-  };
+  }
 
-  const slideUpAnimation = () => {
+  function slideUpAnimation() {
     if (quizBoxRef.current) {
       quizBoxRef.current.style.height = '60vh';
     }
@@ -49,7 +49,7 @@ const Quiz = ({ data }) => {
       }
     }, 1000);
     resetProgress();
-  };
+  }
 
   useEffect(() => {
     const allowedTime = 1 * 10000;
@@ -101,6 +101,6 @@ const Quiz = ({ data }) => {
       </div>
     </span>
   ) : null;
-};
+}
 
 export default Quiz;
