@@ -3,8 +3,6 @@ import Bicon from './Icons/Bblue.ico';
 import Cicon from './Icons/Cblue.ico';
 import Dicon from './Icons/Dblue.ico';
 
-// debugger;
-// export default Aicon;
 const icons = {
   1: Aicon,
   2: Bicon,
