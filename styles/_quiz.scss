@@ -1,35 +1,25 @@
-@mixin flexCenter($width, $height) {
-  width: $width;
-  height: $height;
+@mixin flexCenter() {
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .quiz-page {
-  @include flexCenter(100vw, 90vh);
+  @include flexCenter();
+  height: 90vh;
+  justify-content: center;
   z-index: 100 !important;
-  box-sizing: border-box;
-
   background-color: $basicBackgroundColor;
-  overflow: hidden;
 }
 
 .quiz-box {
-  min-height: 70vh;
+  @include flexCenter();
+  min-height: 50vh;
   padding-bottom: 20px;
   width: 40vw;
-  border: 1px solid red;
   background-color: $internalBackgroundColor;
-  display: flex;
-  align-items: center;
-  text-align: center;
   flex-direction: column;
-  // z-index: 1;
   .btn-answer {
     width: 100%;
-    border: 2px solid palegreen;
     box-shadow: 2px 5px #e0e0e0;
     text-align: left;
     padding-left: 0.6rem;
@@ -41,14 +31,12 @@
   top: 0;
   margin-top: 30px;
   width: 35vw;
-  border: 1px solid red;
   background-color: $internalBackgroundColor;
 }
 
 .quiz-box__hidden {
   top: -150%;
   position: relative;
-  // z-index: 1;
   transition: all 0.9s ease-in;
   width: 35vw;
   background-color: $internalBackgroundColor;
@@ -59,12 +47,10 @@
 }
 
 .quiz-box__content {
-  border: 2px solid gray;
   padding: 0.2rem;
 }
 
 .quiz-box__answers {
-  border: 2px solid black;
   padding: 0.3rem;
   img {
     width: 1.5rem;

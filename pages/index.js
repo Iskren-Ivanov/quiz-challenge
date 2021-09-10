@@ -1,10 +1,13 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 function QuizPage() {
   const [boxIsVisible, setBoxIsVisible] = useState(true);
   const router = useRouter();
-
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
+  
   const handlerClick = () => {
     setBoxIsVisible(false);
     router.push('/quiz');

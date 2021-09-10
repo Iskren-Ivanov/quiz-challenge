@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
-import setResultToLocalStore from '../../helperFunc/setResultToLocalStore';
+import setResultToLocalStorage from '../../helperFunc/setResultToLocalStorage';
 import Icons from '../../alphabetIcons/exportIcons';
 
-const Quiz = ({ data }) => { 
+const Quiz = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const currentQuestion = data[currentIndex];
-
   let interval;
   const router = useRouter();
   const [boxIsVisible, setBoxIsVisible] = useState(true);
   const progressRef = useRef();
   const quizBoxRef = useRef();
+
   const toggleClick = (answerId) => {
     currentQuestion.correctAnswerId === answerId
-      ? setResultToLocalStore(true)
-      : setResultToLocalStore(false);
+      ? setResultToLocalStorage(true)
+      : setResultToLocalStorage(false);
     nextQuiz();
   };
 
@@ -29,35 +29,41 @@ const Quiz = ({ data }) => {
       if (currentIndex < data.length - 1) {
         setCurrentIndex(currentIndex + 1);
       } else {
-        router.push(`/result`);
+        router.push('/result');
       }
     }, 500);
     slideUpAnimation();
   };
 
   const slideUpAnimation = () => {
-    quizBoxRef.current.style.height = '60vh';
+    if (quizBoxRef.current) {
+      quizBoxRef.current.style.height = '60vh';
+    }
     setBoxIsVisible(false);
     setTimeout(function () {
       setBoxIsVisible(true);
       if (quizBoxRef.current) {
-        quizBoxRef.current.style.height = 'auto';
+        if (quizBoxRef.current) {
+          quizBoxRef.current.style.height = 'auto';
+        }
       }
     }, 1000);
     resetProgress();
   };
 
   useEffect(() => {
-    const allowedTime = 1 * 1999000;
+    const allowedTime = 1 * 10000;
     let counter = 0;
-    interval = setInterval(function () { 
+    interval = setInterval(function () {
       if (counter >= allowedTime) {
         counter = 0;
-        setResultToLocalStore(false);
+        setResultToLocalStorage(false);
         nextQuiz();
       } else {
         counter++;
-        progressRef.current.style.width = `${counter / 10}%`;
+        if (progressRef.current) {
+          progressRef.current.style.width = `${counter / 100}%`;
+        }
       }
     }, 1);
     return () => clearInterval(interval);
@@ -74,7 +80,7 @@ const Quiz = ({ data }) => {
         >
           <div className='quiz-box__content'>
             <h1>
-              Question with ID: {currentQuestion.id} {currentQuestion.question}
+              {currentQuestion.id}: {currentQuestion.question}
             </h1>
           </div>
           <div className='quiz-box__answers'>

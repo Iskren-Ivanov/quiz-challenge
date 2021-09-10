@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment } from 'react';
 import Quiz from '../../components/Quiz/Quiz';
 import { withRouter } from 'next/router';
 import axios from 'axios';

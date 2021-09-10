@@ -1,8 +1,4 @@
-function setResultToLocalStore(result) {
-//   debugger;
-if(result ){
-  
-}
+function setResultToLocalStorage(result) {
   localStorage.getItem('result') === null &&
     localStorage.setItem('result', JSON.stringify([]));
 
@@ -11,4 +7,4 @@ if(result ){
   localStorage.setItem('result', JSON.stringify(dropLocalStoreResult));
 }
 
-export default setResultToLocalStore;
+export default setResultToLocalStorage;

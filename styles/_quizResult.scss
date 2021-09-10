@@ -1,6 +1,9 @@
-.quiz-result { 
-   @include flexCenter(100vw, 90vh); 
-   
+.quiz-result {
+  @include flexCenter();
+  justify-content: center;
+  text-align: center;
+  height: 90vh;
+  width: 100vw;
   font-family: $primary-font-family;
   font-weight: $primary-font-weight;
   font-style: $primary-font-style;
@@ -8,7 +11,11 @@
 }
 
 .quiz-rezult-box {
-  @include flexCenter(40vw, 60vh); 
+  @include flexCenter();
+  justify-content: center;
+  text-align: center;
+  height: 60vh;
+  width: 40vw;
   border: 1px solid red;
   background-color: $internalBackgroundColor;
 }
