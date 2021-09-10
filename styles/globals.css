@@ -1,0 +1,220 @@
+.quiz-page {
+  width: 100vw;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  z-index: 100 !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: blue;
+  overflow: hidden;
+}
+
+.quiz-box {
+  min-height: 70vh;
+  padding-bottom: 20px;
+  width: 40vw;
+  border: 1px solid red;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.quiz-box .btn-answer {
+  width: 100%;
+  border: 2px solid palegreen;
+  -webkit-box-shadow: 2px 5px #e0e0e0;
+          box-shadow: 2px 5px #e0e0e0;
+  text-align: left;
+  padding-left: 0.6rem;
+  cursor: pointer;
+}
+
+.quiz-box__visible {
+  top: 0;
+  margin-top: 30px;
+  width: 35vw;
+  border: 1px solid red;
+  background-color: white;
+}
+
+.quiz-box__hidden {
+  top: -150%;
+  position: relative;
+  -webkit-transition: all 0.9s ease-in;
+  transition: all 0.9s ease-in;
+  width: 35vw;
+  background-color: white;
+}
+
+.quiz-box__content .quiz-box__answers {
+  background-color: white;
+}
+
+.quiz-box__content {
+  border: 2px solid gray;
+  padding: 0.2rem;
+}
+
+.quiz-box__answers {
+  border: 2px solid black;
+  padding: 0.3rem;
+}
+
+.quiz-box__answers img {
+  width: 1.5rem;
+  height: 1.5rem;
+  float: left;
+}
+
+.answer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px;
+}
+
+.progress {
+  z-index: 100;
+  width: 100%;
+  background-color: white;
+}
+
+.bar {
+  width: 1%;
+  height: 10px;
+  background-color: red;
+}
+
+.start-quiz {
+  width: 100vw;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: laca sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+  background-color: blue;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.start-quiz-box {
+  width: 40vw;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border: 1px solid red;
+  background-color: white;
+}
+
+.start-quiz-box button {
+  margin-top: 0.5rem;
+  height: 20%;
+  width: 100%;
+  border: 2px solid palegreen;
+  -webkit-box-shadow: 2px 5px #e0e0e0;
+          box-shadow: 2px 5px #e0e0e0;
+  text-align: left;
+  padding-left: 0.6rem;
+  cursor: pointer;
+}
+
+.start-quiz-box__visible {
+  top: 0;
+  height: 50vh;
+  width: 35vw;
+  border: 1px solid red;
+  background-color: white;
+}
+
+.start-quiz-box__hidden {
+  top: -150%;
+  position: relative;
+  -webkit-transition: all 0.9s ease-in;
+  transition: all 0.9s ease-in;
+  height: 50vh;
+  width: 35vw;
+  background-color: white;
+}
+
+.quiz-result {
+  width: 100vw;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-family: laca sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+  background-color: blue;
+}
+
+.quiz-rezult-box {
+  width: 40vw;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border: 1px solid red;
+  background-color: white;
+}
+
+* {
+  font-family: laca sans-serif !important;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+/*# sourceMappingURL=globals.css.map */

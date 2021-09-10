@@ -1,0 +1,43 @@
+.start-quiz {
+  @include flexCenter(100vw, 90vh);
+  font-family: $primary-font-family;
+  font-weight: $primary-font-weight;
+  font-style: $primary-font-style;
+  background-color: $basicBackgroundColor;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.start-quiz-box {
+  @include flexCenter(40vw, 60vh);
+  
+  border: 1px solid red;
+  background-color: $internalBackgroundColor;
+  button {
+    margin-top: 0.5rem;
+    height: 20%;
+    width: 100%;
+    border: 2px solid palegreen;
+    box-shadow: 2px 5px #e0e0e0;
+    text-align: left;
+    padding-left: 0.6rem;
+    cursor: pointer;
+  }
+}
+
+.start-quiz-box__visible {
+  top: 0;
+  height: 50vh;
+  width: 35vw;
+  border: 1px solid red;
+  background-color: $internalBackgroundColor;
+}
+
+.start-quiz-box__hidden {
+  top: -150%;
+  position: relative;
+  transition: all 0.9s ease-in;
+  height: 50vh;
+  width: 35vw;
+  background-color: $internalBackgroundColor;
+}

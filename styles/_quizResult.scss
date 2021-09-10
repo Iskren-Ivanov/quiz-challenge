@@ -1,0 +1,14 @@
+.quiz-result { 
+   @include flexCenter(100vw, 90vh); 
+   
+  font-family: $primary-font-family;
+  font-weight: $primary-font-weight;
+  font-style: $primary-font-style;
+  background-color: $basicBackgroundColor;
+}
+
+.quiz-rezult-box {
+  @include flexCenter(40vw, 60vh); 
+  border: 1px solid red;
+  background-color: $internalBackgroundColor;
+}

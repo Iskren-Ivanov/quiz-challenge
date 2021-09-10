@@ -1,0 +1,20 @@
+@import './variables';
+@import './quiz';
+@import './quizStart';
+@import './quizResult';
+// @import 'variables'
+// @import 'quiz'
+// @import 'quizStart'
+// @import 'quizResult';
+
+* {
+  font-family: $primary-font-family;
+  font-weight: $primary-font-weight;
+  font-style: $primary-font-style;
+  margin: 0;
+  padding: 0;
+}
+// $primary-color: #333;
+// font-family: laca, sans-serif;
+// font-weight: 400;
+// font-style: normal
