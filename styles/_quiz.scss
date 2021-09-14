@@ -9,6 +9,7 @@
   justify-content: center;
   z-index: 100 !important;
   background-color: $basicBackgroundColor;
+  position: relative;
 }
 
 .quiz-box {
@@ -17,24 +18,19 @@
   padding-bottom: 20px;
   width: 40vw;
   background-color: $internalBackgroundColor;
-  flex-direction: column; 
-  .btn-answer {
-    width: 100%;
-    box-shadow: 2px 5px #e0e0e0;
-    text-align: left;
-    padding-left: 0.6rem;
-    cursor: pointer;
-  }
+  flex-direction: column;
+  position: relative;
+  
 }
 
 .quiz-box__visible {
   top: 0;
   margin-top: 30px;
   width: 35vw;
-  background-color: $internalBackgroundColor; 
+  background-color: $internalBackgroundColor;
 }
 
-.quiz-box__hidden { 
+.quiz-box__hidden {
   top: -150%;
   position: relative;
   transition: all 0.9s ease-in;
@@ -56,6 +52,13 @@
     width: 1.5rem;
     height: 1.5rem;
     float: left;
+  }
+  .btn-answer {
+    width: 100%;
+    box-shadow: 2px 5px #e0e0e0;
+    text-align: left;
+    padding-left: 0.6rem;
+    cursor: pointer;
   }
 }
 
