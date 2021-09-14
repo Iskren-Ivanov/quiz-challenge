@@ -89,7 +89,7 @@ function Quiz({ data }: PageProps) {
   }, [currentIndex]);
 
   return currentQuestion ? (
-    <span className='quiz-page'>
+    <div className='quiz-page'>
       <div className='quiz-box' ref={quizBoxRef}>
         <div className='progress'>
           <div className='bar' ref={progressRef} />
@@ -118,7 +118,7 @@ function Quiz({ data }: PageProps) {
           </div>
         </div>
       </div>
-    </span>
+    </div>
   ) : null;
 }
 

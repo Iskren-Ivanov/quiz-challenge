@@ -17,7 +17,7 @@
   padding-bottom: 20px;
   width: 40vw;
   background-color: $internalBackgroundColor;
-  flex-direction: column;
+  flex-direction: column; 
   .btn-answer {
     width: 100%;
     box-shadow: 2px 5px #e0e0e0;
@@ -31,10 +31,10 @@
   top: 0;
   margin-top: 30px;
   width: 35vw;
-  background-color: $internalBackgroundColor;
+  background-color: $internalBackgroundColor; 
 }
 
-.quiz-box__hidden {
+.quiz-box__hidden { 
   top: -150%;
   position: relative;
   transition: all 0.9s ease-in;
