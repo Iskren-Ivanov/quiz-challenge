@@ -90,6 +90,7 @@ function Quiz({ data }: PageProps) {
 
   return currentQuestion ? (
     <div className='quiz-page'>
+      <div className='quiz-box__top'></div>
       <div className='quiz-box' ref={quizBoxRef}>
         <div className='progress'>
           <div className='bar' ref={progressRef} />

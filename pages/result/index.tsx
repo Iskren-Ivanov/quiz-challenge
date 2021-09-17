@@ -22,7 +22,7 @@ function Result() {
       <div className='quiz-result'>
         <div className='quiz-rezult-box'>
           <h1>
-            Your correct answers from {numberOfQuestion} questions are: 
+            Your correct answers from {numberOfQuestion} questions are:
             {correctAnswers}
           </h1>
         </div>

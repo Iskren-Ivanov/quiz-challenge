@@ -3,13 +3,16 @@
   align-items: center;
 }
 
+// .TestP{
+//   position: relative;
+//   z-index: 0;
+//   }
+
 .quiz-page {
   @include flexCenter();
   height: 90vh;
   justify-content: center;
-  z-index: 100 !important;
   background-color: $basicBackgroundColor;
-  position: relative;
 }
 
 .quiz-box {
@@ -17,10 +20,21 @@
   min-height: 50vh;
   padding-bottom: 20px;
   width: 40vw;
+  max-height: 10vw;
   background-color: $internalBackgroundColor;
   flex-direction: column;
-  position: relative;
-  
+}
+
+.quiz-box__top {
+  @include flexCenter();
+  background-color: blue;
+  color: blue;
+  min-height: 20vh;
+  top: 0;
+  width: 240vw;
+  flex-direction: column;
+  z-index: 1;
+  position: absolute;
 }
 
 .quiz-box__visible {
@@ -28,13 +42,16 @@
   margin-top: 30px;
   width: 35vw;
   background-color: $internalBackgroundColor;
+  z-index: 0;
+  position: relative;
 }
 
 .quiz-box__hidden {
-  top: -150%;
+  top: -250%;
   position: relative;
-  transition: all 0.9s ease-in;
+  transition: all 1.9s ease-in;
   width: 35vw;
+  z-index: -1;
   background-color: $internalBackgroundColor;
 }
 
@@ -68,7 +85,7 @@
 }
 
 .progress {
-  z-index: 100;
+  z-index: 5;
   width: 100%;
   background-color: $internalBackgroundColor;
 }

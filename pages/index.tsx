@@ -1,21 +1,24 @@
 import { Fragment, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-
+ 
 function QuizPage() {
   const [boxIsVisible, setBoxIsVisible] = useState(true);
   const router = useRouter();
   useEffect(() => {
     localStorage.clear();
   }, []);
-
+ 
   const handlerClick = () => {
     setBoxIsVisible(false);
-    router.push('/quiz');
+    setTimeout(() => {
+      router.push('/quiz');
+    }, 800);
   };
-
+ 
   return (
     <Fragment>
       <div className='start-quiz'>
+      <div className='start-quiz-box__top' ></div>
         <div className='start-quiz-box'>
           <div
             className={
@@ -34,5 +37,5 @@ function QuizPage() {
     </Fragment>
   );
 }
-
+ 
 export default QuizPage;
